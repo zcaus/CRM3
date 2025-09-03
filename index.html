@@ -92,7 +92,7 @@
             
             <!-- User-specific UI -->
             <div id="user-ui" class="hidden">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">Cadastro de Visitas</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Registro de Visitas</h2>
                 <form id="agendamento-form" class="space-y-4 bg-gray-50 p-6 rounded-lg shadow-inner">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input type="date" id="data-visita" class="w-full p-3" required>
@@ -109,7 +109,7 @@
                         <input type="text" id="valor" placeholder="Valor (R$)" class="w-full p-3">
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" id="cep" placeholder="CEP (Ex: 00000-000)" class="w-full p-3" maxlength="9">
+                        <input type="text" id="cep" placeholder="CEP (Ex: 00000000)" class="w-full p-3" maxlength="9">
                         <button type="button" id="buscar-cep-btn" class="p-3 bg-gray-400 text-white rounded-lg hover:bg-gray-500">Buscar CEP</button>
                     </div>
                     <div id="cep-message" class="text-sm text-red-500"></div>
@@ -120,7 +120,7 @@
                 </form>
 
                 <!-- NEW: User's appointments table -->
-                <h2 class="text-2xl font-bold my-6 text-gray-800">Suas Visitas Agendadas</h2>
+                <h2 class="text-2xl font-bold my-6 text-gray-800">Suas Visitas</h2>
                 <div id="user-agendamentos-container">
                     <h3 class="text-xl font-semibold mb-2">Visitas</h3>
                     <div id="user-loading-spinner" class="flex justify-center items-center py-8 hidden">
@@ -340,7 +340,7 @@
         const showApp = (user) => {
             loginScreen.classList.add('hidden');
             mainContent.classList.remove('hidden');
-            userTitle.textContent = `Bem-vindo(a), ${user}`;
+            userTitle.textContent = `Bem-vindo, ${user}`;
             currentUser = user;
             
             if (['Caua', 'Renan'].includes(user)) {
